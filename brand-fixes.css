@@ -7,4 +7,7 @@
 .brand-logo-footer .dot{color:#c4522b!important}
 .mock-logo{display:block;width:42px;height:42px;background:url("writed-logo-official.svg") center/contain no-repeat;font-size:0;line-height:0}
 .mock-editor h2{line-height:1.09;letter-spacing:-.052em;margin-top:24px;margin-bottom:34px}
+.download-row.download-ready{cursor:pointer}
+.download-row.download-ready:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.download-row.download-ready:hover{box-shadow:0 20px 42px rgba(23,23,21,.16)}
 @media(max-width:800px){.brand-logo{gap:10px}.brand-logo::before{width:46px;height:46px}.mock-logo{width:34px;height:34px}.mock-editor h2{line-height:1.08;letter-spacing:-.045em}}
