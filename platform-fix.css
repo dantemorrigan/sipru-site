@@ -54,7 +54,7 @@
 .download-row:nth-child(1):hover{background:#fbfaf7 !important;box-shadow:0 18px 38px rgba(23,23,21,.08)}
 .download-row:nth-child(1):hover .platform-icon{background:#f1eee7;box-shadow:0 10px 22px rgba(0,0,0,.08)}
 
-/* Android: active, green. */
+/* Android: active, green. Keep the card stable on hover so its content never fades/washes out. */
 .download-row:nth-child(3){
   background:#2fbd70 !important;
   background-image:linear-gradient(135deg,#1f8f55 0%,#2fbd70 48%,#59df91 100%) !important;
@@ -71,6 +71,22 @@
   color:#fff;
   border-color:rgba(255,255,255,.34);
 }
+.download-row:nth-child(3):hover{
+  transform:none;
+  background:#2fbd70 !important;
+  background-image:linear-gradient(135deg,#1f8f55 0%,#2fbd70 48%,#59df91 100%) !important;
+  background-position:0 0;
+  box-shadow:0 18px 38px rgba(23,23,21,.10);
+  border-color:#218c54 !important;
+}
+.download-row:nth-child(3):hover:before{transform:none;opacity:0}
+.download-row:nth-child(3):hover:after{opacity:.7}
+.download-row:nth-child(3):hover .platform-icon{
+  transform:none;
+  background:rgba(255,255,255,.16);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.25),0 8px 18px rgba(0,0,0,.08);
+}
+.download-row:nth-child(3):hover .status{color:#fff}
 
 /* Windows: inactive, grey. */
 .download-row:nth-child(2){
