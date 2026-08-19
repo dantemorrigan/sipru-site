@@ -1,2 +1,14 @@
-/* Official Writed. app mark — exact supplied artwork, vectorized from the source logo */
-.brand-logo,.brand-logo-footer{display:inline-flex;align-items:center}.brand-logo{gap:10px}.brand-logo-footer{gap:7px}.brand-logo img,.brand-logo-footer img{display:none!important}.brand-logo::before,.brand-logo-footer::before{content:"";display:block;flex:0 0 auto;background:center/contain no-repeat url("writed-logo-official.svg")}.brand-logo::before{width:34px;height:34px}.brand-logo-footer::before{width:27px;height:27px}.brand-logo>span,.brand-logo-footer>span{display:inline-block}.brand-logo-footer>.brand{display:inline}.brand-logo-footer>.brand.small{font-size:1.3rem}
+/* Official Writed. app mark — exact supplied artwork */
+.brand-logo,.brand-logo-footer{display:inline-flex;align-items:center;line-height:1}
+.brand-logo{gap:14px}
+.brand-logo-footer{gap:8px}
+.brand-logo::before,.brand-logo-footer::before{content:"";display:block;flex:0 0 auto;background:center/contain no-repeat url("writed-logo-official.svg");align-self:center}
+.brand-logo::before{width:52px;height:52px}
+.brand-logo-footer::before{width:27px;height:27px}
+.brand-logo>span,.brand-logo-footer>span{display:inline-block;line-height:1}
+.brand-logo-footer>.brand{display:inline}
+.brand-logo-footer>.brand.small{font-size:1.3rem}
+/* The wordmark's terminal dot uses the exact official accent. */
+.brand-logo .dot,.brand-logo-footer .dot{color:#c4522b}
+/* Keep the logo mark and wordmark optically centered on the same baseline. */
+.brand-logo .brand-word{display:inline-flex;align-items:baseline;line-height:1}
