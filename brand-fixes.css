@@ -2,28 +2,30 @@
 .brand-logo{gap:12px;align-items:center;line-height:1}
 .brand-logo .brand-word{display:inline-flex;align-items:baseline;white-space:nowrap;line-height:1}
 .brand-logo .dot,.brand-logo-footer .dot{color:#c4522b!important}
-.brand-logo-footer{gap:8px;align-items:center;line-height:1}
-.brand-logo-footer>span{display:flex;align-items:baseline;gap:8px;min-width:0;white-space:nowrap}
-.brand-logo-footer .brand{display:inline-block;flex:0 0 auto;line-height:1}
-.brand-logo-footer .mono{display:inline-block;flex:0 1 auto;line-height:1.25;white-space:nowrap}
+.brand-logo-footer{gap:10px;align-items:center;line-height:1}
 .brand-logo-footer .dot{color:#c4522b!important}
+.footer-tagline{color:var(--muted);font-size:.66rem;letter-spacing:.02em}
 .mock-logo{display:block;width:42px;height:42px;background:url("writed-logo-official.svg") center/contain no-repeat;font-size:0;line-height:0}
 .mock-editor h2{line-height:1.09;letter-spacing:-.052em;margin-top:24px;margin-bottom:34px}
 
 /* Boosty support CTA */
-.support-link{
+.support-cta{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  color:var(--ink)!important;
-  border:1px solid var(--line);
+  color:#fff!important;
+  border:1px solid #c4522b;
   border-radius:999px;
-  padding:12px 17px 11px;
-  background:rgba(255,255,255,.35);
-  transition:transform .3s ease,background-color .3s ease,border-color .3s ease,box-shadow .3s ease,color .3s ease;
+  padding:19px 34px;
+  font-size:.72rem;
+  letter-spacing:.07em;
+  background:linear-gradient(135deg,#e0673a 0%,#c4522b 55%,#a8431f 100%);
+  box-shadow:0 12px 26px rgba(196,82,43,.28),inset 0 1px 0 rgba(255,255,255,.22);
+  transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s ease,background-color .3s ease;
 }
-.support-link:hover{opacity:1!important;transform:translateY(-2px);background:#fff;border-color:#c8c2b8;box-shadow:0 8px 20px rgba(23,23,21,.07)}
-.support-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.support-cta:hover{opacity:1!important;transform:translateY(-3px) scale(1.02);box-shadow:0 18px 34px rgba(196,82,43,.38),inset 0 1px 0 rgba(255,255,255,.3)}
+.support-cta:active{transform:translateY(-1px) scale(1)}
+.support-cta:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
 
 /* Support modal */
 body.modal-open{overflow:hidden}
@@ -48,16 +50,13 @@ body.modal-open{overflow:hidden}
 @media(max-width:800px){
   .brand-logo{gap:10px}
   .brand-logo::before{width:46px;height:46px}
-  .brand-logo-footer>span{gap:6px;flex-wrap:wrap;white-space:normal}
-  .brand-logo-footer .mono{white-space:normal}
   .mock-logo{width:34px;height:34px}
   .mock-editor h2{line-height:1.08;letter-spacing:-.045em}
-  .support{align-items:flex-start;flex-direction:column;gap:28px}
-  .support-link{align-self:flex-start}
+  .support-cta{width:100%}
   .support-modal{padding:14px}
   .support-dialog{padding:36px 24px 28px;border-radius:22px;max-height:calc(100dvh - 28px)}
   .support-dialog h2{font-size:clamp(2.7rem,13vw,4rem)}
   .support-dialog>p:not(.eyebrow){font-size:1.03rem}
   .modal-support-btn{width:100%}
 }
-@media(prefers-reduced-motion:reduce){.support-modal,.support-dialog,.support-link,.modal-support-btn,.support-close{transition:none}}
+@media(prefers-reduced-motion:reduce){.support-modal,.support-dialog,.support-cta,.modal-support-btn,.support-close{transition:none}}
