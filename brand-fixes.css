@@ -1,6 +1,6 @@
 /* Final brand + mockup polish */
 .brand-logo{gap:12px;align-items:center;line-height:1}
-.brand-logo .brand-word{display:inline-flex;align-items:baseline;white-space:nowrap;line-height:1}
+.brand-logo .brand-word{display:inline-flex;align-items:baseline;white-space:nowrap;line-height:1;position:relative;top:4px}
 .brand-logo .dot,.brand-logo-footer .dot{color:#c4522b!important}
 .brand-logo-footer{gap:10px;align-items:center;line-height:1}
 .brand-logo-footer .dot{color:#c4522b!important}
