@@ -1,4 +1,5 @@
 document.body.classList.add('js');
+const platformFix=document.createElement('link');platformFix.rel='stylesheet';platformFix.href='platform-fix.css';document.head.appendChild(platformFix);
 const menu=document.querySelector('.menu-toggle');const nav=document.querySelector('#site-nav');const lang=document.querySelector('#lang-toggle');
 if(menu&&nav){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?(document.documentElement.lang==='ru'?'Закрыть':'Close'):(document.documentElement.lang==='ru'?'Меню':'Menu')});nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent=document.documentElement.lang==='ru'?'Меню':'Menu'}))}
 document.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',e=>{const target=document.querySelector(link.getAttribute('href'));if(!target)return;e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'})}));
