@@ -7,7 +7,58 @@
 .brand-logo-footer .dot{color:#c4522b!important}
 .mock-logo{display:block;width:42px;height:42px;background:url("writed-logo-official.svg") center/contain no-repeat;font-size:0;line-height:0}
 .mock-editor h2{line-height:1.09;letter-spacing:-.052em;margin-top:24px;margin-bottom:34px}
-.download-row.download-ready{cursor:pointer}
+
+/* Download cards: lighter, quieter motion. */
+.download-row.download-ready{
+  cursor:pointer;
+  min-height:190px;
+  padding:24px;
+  border-radius:18px;
+  background:#fbfaf7!important;
+  color:var(--ink);
+  border:1px solid var(--line);
+  box-shadow:0 1px 0 rgba(23,23,21,.03);
+  transition:transform .32s cubic-bezier(.2,.7,.2,1),box-shadow .32s ease,border-color .32s ease,background-color .32s ease;
+}
+.download-row.download-ready:before{display:none}
+.download-row.download-ready:after{inset:0;border-radius:18px;border:0;opacity:0;transition:opacity .32s ease}
+.download-row.download-ready:hover{
+  transform:translateY(-3px);
+  background:#fff!important;
+  border-color:#c8c2b8;
+  box-shadow:0 10px 24px rgba(23,23,21,.07);
+}
 .download-row.download-ready:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
-.download-row.download-ready:hover{box-shadow:0 20px 42px rgba(23,23,21,.16)}
-@media(max-width:800px){.brand-logo{gap:10px}.brand-logo::before{width:46px;height:46px}.mock-logo{width:34px;height:34px}.mock-editor h2{line-height:1.08;letter-spacing:-.045em}}
+.download-row.download-ready .platform-icon{
+  width:50px;height:50px;border-radius:14px;
+  background:#f0ede6;color:var(--ink);
+  border:1px solid #e0dbd1;
+  box-shadow:none;
+  transition:transform .32s cubic-bezier(.2,.7,.2,1),background-color .32s ease;
+}
+.download-row.download-ready:hover .platform-icon{transform:translateY(-1px);background:#ebe7df;box-shadow:none}
+.download-row.download-ready h3{font-size:1.75rem;color:var(--ink);margin-bottom:6px}
+.download-row.download-ready p{color:var(--muted);transition:color .32s ease}
+.download-row.download-ready:hover p{color:#514e48}
+.download-row.download-ready .status{
+  right:24px;top:25px;
+  padding:6px 9px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  color:var(--muted);
+  background:#f5f2eb;
+  font-size:.55rem;
+  transition:background-color .32s ease,color .32s ease,border-color .32s ease;
+}
+.download-row.download-ready:hover .status{color:var(--ink);background:#efebe3;border-color:#cbc5bb}
+
+@media(max-width:800px){
+  .brand-logo{gap:10px}
+  .brand-logo::before{width:46px;height:46px}
+  .mock-logo{width:34px;height:34px}
+  .mock-editor h2{line-height:1.08;letter-spacing:-.045em}
+  .download-row.download-ready{min-height:175px;padding:20px;border-radius:16px}
+  .download-row.download-ready:after{border-radius:16px}
+  .download-row.download-ready .platform-icon{width:46px;height:46px;border-radius:12px}
+  .download-row.download-ready .status{right:20px;top:21px}
+}
