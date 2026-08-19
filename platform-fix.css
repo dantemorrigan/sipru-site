@@ -1,0 +1,47 @@
+/* Final platform card layout correction. Loaded after styles.css. */
+.download-row{
+  grid-template-columns:58px minmax(0,1fr);
+  grid-template-rows:58px minmax(0,1fr);
+  align-items:start;
+  min-width:0;
+}
+.download-row .download-index{
+  grid-column:1;
+  grid-row:1;
+  align-self:center;
+}
+.download-row .platform-icon{
+  grid-column:2;
+  grid-row:1;
+  align-self:start;
+  justify-self:start;
+}
+.download-row .download-copy{
+  grid-column:1 / -1;
+  grid-row:2;
+  align-self:end;
+  min-width:0;
+  padding-top:12px;
+}
+.download-row .download-copy h3,
+.download-row .download-copy p{
+  max-width:100%;
+}
+.download-row .status{
+  position:absolute;
+  top:30px;
+  right:28px;
+}
+@media(max-width:800px){
+  .download-list{grid-template-columns:1fr}
+  .download-row{
+    grid-template-columns:48px minmax(0,1fr);
+    grid-template-rows:52px minmax(0,1fr);
+    min-height:180px;
+    padding:24px;
+  }
+  .download-row .download-index{grid-column:1;grid-row:1}
+  .download-row .platform-icon{width:52px;height:52px;grid-column:2;grid-row:1}
+  .download-row .download-copy{grid-column:1 / -1;grid-row:2;padding-top:14px}
+  .download-row .status{top:24px;right:24px}
+}
