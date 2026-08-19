@@ -27,32 +27,70 @@
 .download-row .download-copy p{max-width:100%}
 .download-row .status{position:absolute;top:30px;right:28px}
 
-/* Visual order: macOS → Android → Windows. */
-.download-row:nth-child(1){order:1}
-.download-row:nth-child(3){order:2}
-.download-row:nth-child(2){order:3}
+/* Exact desktop order: macOS → Android → Windows. */
+@media(min-width:801px){
+  .download-row:nth-child(1){grid-column:1;grid-row:1}
+  .download-row:nth-child(3){grid-column:2;grid-row:1}
+  .download-row:nth-child(2){grid-column:3;grid-row:1}
+}
 
-/* Android is available. Windows is intentionally unavailable. */
-.download-row:nth-child(3){
-  background-image:linear-gradient(135deg,#218c54 0%,#2fbd70 45%,#58df91 72%,#187447 100%);
+/* Exact platform colors/states. */
+.download-row:nth-child(1){
+  background:#fbfaf7 !important;
+  color:#171715 !important;
+  border-color:#d7d2c8 !important;
   cursor:pointer;
 }
-.download-row:nth-child(2){
-  background-image:linear-gradient(135deg,#8b8b88 0%,#a8a7a2 45%,#c3c2bd 72%,#777772 100%);
-  cursor:not-allowed;
-  filter:grayscale(.25);
-  opacity:.72;
+.download-row:nth-child(1) .platform-icon{
+  background:#f1eee7;
+  color:#171715;
+  border-color:#d7d2c8;
 }
+.download-row:nth-child(1) h3{color:#171715}
+.download-row:nth-child(1) p{color:#77736b}
+.download-row:nth-child(1) .status{color:#77736b}
+.download-row:nth-child(1):before,
+.download-row:nth-child(1):after{display:none}
+.download-row:nth-child(1):hover{background:#fbfaf7 !important;box-shadow:0 18px 38px rgba(23,23,21,.08)}
+.download-row:nth-child(1):hover .platform-icon{background:#f1eee7;box-shadow:0 10px 22px rgba(0,0,0,.08)}
+
+.download-row:nth-child(3){
+  background-image:linear-gradient(135deg,#218c54 0%,#2fbd70 45%,#58df91 72%,#187447 100%) !important;
+  color:#fff !important;
+  cursor:pointer;
+}
+.download-row:nth-child(3) h3,
+.download-row:nth-child(3) p,
+.download-row:nth-child(3) .status{color:#fff}
+.download-row:nth-child(3) p{color:rgba(255,255,255,.82)}
+
+.download-row:nth-child(2){
+  background:#b8b7b2 !important;
+  color:#f7f6f2 !important;
+  border-color:#aaa8a1 !important;
+  cursor:not-allowed;
+  filter:none;
+  opacity:.78;
+}
+.download-row:nth-child(2) h3,
+.download-row:nth-child(2) p,
+.download-row:nth-child(2) .status{color:#f7f6f2}
 .download-row:nth-child(2):hover{
   transform:none;
+  background:#b8b7b2 !important;
   background-position:0 0;
   box-shadow:none;
 }
 .download-row:nth-child(2):hover .platform-icon{transform:none}
 .download-row:nth-child(2):hover:before{transform:rotate(-8deg);opacity:.7}
 .download-row:nth-child(2):hover:after{opacity:.7}
-.download-row:nth-child(3),
-.download-row:nth-child(3) *{pointer-events:auto}
+
+/* Visible numbering follows the requested order. */
+.download-row .download-index{font-size:0}
+.download-row .download-index:after{font-size:.68rem}
+.download-row:nth-child(1) .download-index:after{content:'01'}
+.download-row:nth-child(3) .download-index:after{content:'02'}
+.download-row:nth-child(2) .download-index:after{content:'03'}
 
 @media(max-width:800px){
   .download-list{grid-template-columns:1fr}
