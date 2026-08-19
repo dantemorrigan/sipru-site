@@ -7,9 +7,9 @@ function setLanguage(next){const dict=translations[next];if(!dict)return;documen
 const macDownloadUrl='https://github.com/dantemorrigan/writed./releases/download/v1.2.0/Writed._1.2.0_universal.dmg';
 const androidDownloadUrl='https://github.com/dantemorrigan/writed./releases/download/v1.2.0/Writed-1.2.0-Android.apk';
 const macCard=document.querySelector('.download-row:nth-child(1)');
-const androidCard=document.querySelector('.download-row:nth-child(3)');
+const androidCard=document.querySelector('.android-icon')?.closest('.download-row');
 const updateMacDownloadLabel=()=>{const status=macCard?.querySelector('.status');if(status)status.textContent=document.documentElement.lang==='ru'?'СКАЧАТЬ':'DOWNLOAD'};
-const makeDownloadCard=(card,url,label)=>{if(!card)return;card.classList.add('download-ready');card.style.cursor='pointer';card.setAttribute('role','link');card.setAttribute('tabindex','0');card.setAttribute('aria-label',label);card.addEventListener('click',()=>{window.location.href=url});card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();window.location.href=url}})};
+const makeDownloadCard=(card,url,label)=>{if(!card)return;card.classList.add('download-ready');card.style.cursor='pointer';card.style.pointerEvents='auto';card.setAttribute('role','link');card.setAttribute('tabindex','0');card.setAttribute('aria-label',label);const go=()=>{window.location.assign(url)};card.addEventListener('click',go);card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})};
 makeDownloadCard(macCard,macDownloadUrl,'Download Writed. for macOS');
 makeDownloadCard(androidCard,androidDownloadUrl,'Download Writed. for Android');
 const androidStatus=androidCard?.querySelector('.status');if(androidStatus)androidStatus.textContent=document.documentElement.lang==='ru'?'СКАЧАТЬ':'DOWNLOAD';
