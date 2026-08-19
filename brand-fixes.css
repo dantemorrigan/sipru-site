@@ -1,0 +1,7 @@
+/* Final brand + mockup polish */
+.brand-logo{gap:12px}
+.brand-logo .brand-word{display:inline-block;white-space:nowrap}
+.brand-logo-footer{gap:8px}
+.mock-logo{display:block;width:42px;height:42px;background:url("writed-logo-official.svg") center/contain no-repeat;font-size:0;line-height:0}
+.mock-editor h2{line-height:1.09;letter-spacing:-.052em;margin-top:24px;margin-bottom:34px}
+@media(max-width:800px){.mock-logo{width:34px;height:34px}.mock-editor h2{line-height:1.08;letter-spacing:-.045em}}
