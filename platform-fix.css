@@ -24,14 +24,36 @@
   padding-top:12px;
 }
 .download-row .download-copy h3,
-.download-row .download-copy p{
-  max-width:100%;
+.download-row .download-copy p{max-width:100%}
+.download-row .status{position:absolute;top:30px;right:28px}
+
+/* Visual order: macOS → Android → Windows. */
+.download-row:nth-child(1){order:1}
+.download-row:nth-child(3){order:2}
+.download-row:nth-child(2){order:3}
+
+/* Android is available. Windows is intentionally unavailable. */
+.download-row:nth-child(3){
+  background-image:linear-gradient(135deg,#218c54 0%,#2fbd70 45%,#58df91 72%,#187447 100%);
+  cursor:pointer;
 }
-.download-row .status{
-  position:absolute;
-  top:30px;
-  right:28px;
+.download-row:nth-child(2){
+  background-image:linear-gradient(135deg,#8b8b88 0%,#a8a7a2 45%,#c3c2bd 72%,#777772 100%);
+  cursor:not-allowed;
+  filter:grayscale(.25);
+  opacity:.72;
 }
+.download-row:nth-child(2):hover{
+  transform:none;
+  background-position:0 0;
+  box-shadow:none;
+}
+.download-row:nth-child(2):hover .platform-icon{transform:none}
+.download-row:nth-child(2):hover:before{transform:rotate(-8deg);opacity:.7}
+.download-row:nth-child(2):hover:after{opacity:.7}
+.download-row:nth-child(3),
+.download-row:nth-child(3) *{pointer-events:auto}
+
 @media(max-width:800px){
   .download-list{grid-template-columns:1fr}
   .download-row{
