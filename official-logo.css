@@ -13,37 +13,3 @@
 /* Keep the logo mark and wordmark optically centered on the same baseline. */
 .brand-logo .brand-word{display:inline-flex;align-items:baseline;line-height:1}
 
-/* Android download card: higher-specificity safety override. Keep it green and fully visible on hover. */
-#downloads .download-row:nth-child(3),
-#downloads .download-row:nth-child(3):hover,
-#downloads .download-row:nth-child(3):focus,
-#downloads .download-row:nth-child(3):active{
-  background:#2fbd70 !important;
-  background-image:linear-gradient(135deg,#1f8f55 0%,#2fbd70 48%,#59df91 100%) !important;
-  background-position:0 0 !important;
-  color:#fff !important;
-  border-color:#218c54 !important;
-  opacity:1 !important;
-  filter:none !important;
-  transform:none !important;
-  box-shadow:none !important;
-}
-#downloads .download-row:nth-child(3):before,
-#downloads .download-row:nth-child(3):after,
-#downloads .download-row:nth-child(3):hover:before,
-#downloads .download-row:nth-child(3):hover:after{display:none !important;opacity:0 !important;content:none !important}
-#downloads .download-row:nth-child(3) .platform-icon,
-#downloads .download-row:nth-child(3):hover .platform-icon{
-  transform:none !important;
-  background:rgba(255,255,255,.16) !important;
-  color:#fff !important;
-  border-color:rgba(255,255,255,.34) !important;
-  box-shadow:none !important;
-}
-#downloads .download-row:nth-child(3) h3,
-#downloads .download-row:nth-child(3) p,
-#downloads .download-row:nth-child(3) .status{
-  color:#fff !important;
-  opacity:1 !important;
-}
-#downloads .download-row:nth-child(3) p{color:rgba(255,255,255,.88) !important}
