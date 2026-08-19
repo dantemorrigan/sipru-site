@@ -54,6 +54,41 @@
 }
 .download-row.download-ready:hover .status{color:var(--ink);background:#efebe3;border-color:#cbc5bb}
 
+/* Boosty support CTA */
+.support-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--ink)!important;
+  border:1px solid var(--line);
+  border-radius:999px;
+  padding:12px 17px 11px;
+  background:rgba(255,255,255,.35);
+  transition:transform .3s ease,background-color .3s ease,border-color .3s ease,box-shadow .3s ease,color .3s ease;
+}
+.support-link:hover{opacity:1!important;transform:translateY(-2px);background:#fff;border-color:#c8c2b8;box-shadow:0 8px 20px rgba(23,23,21,.07)}
+.support-link:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+
+/* Support modal */
+body.modal-open{overflow:hidden}
+.support-modal{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:24px;visibility:hidden;opacity:0;pointer-events:none;transition:opacity .28s ease,visibility .28s ease}
+.support-modal.is-open{visibility:visible;opacity:1;pointer-events:auto}
+.support-modal-backdrop{position:absolute;inset:0;background:rgba(23,23,21,.58);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px)}
+.support-dialog{position:relative;width:min(680px,100%);max-height:min(720px,calc(100dvh - 48px));overflow:auto;padding:48px 48px 42px;background:#fbfaf7;color:var(--ink);border:1px solid rgba(23,23,21,.14);border-radius:26px;box-shadow:0 28px 70px rgba(23,23,21,.24),0 2px 0 rgba(255,255,255,.65) inset;transform:translateY(18px) scale(.98);transition:transform .32s cubic-bezier(.2,.7,.2,1)}
+.support-modal.is-open .support-dialog{transform:none}
+.support-close{position:absolute;top:17px;right:17px;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:#f5f2eb;color:var(--ink);font:500 1.5rem/1 system-ui,sans-serif;cursor:pointer;display:grid;place-items:center;transition:transform .25s ease,background-color .25s ease,border-color .25s ease}
+.support-close:hover{transform:rotate(6deg);background:#fff;border-color:#c5bfb5}
+.support-close:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.support-dialog .eyebrow{margin-bottom:18px}
+.support-dialog h2{margin:0 0 22px;font-size:clamp(3rem,7vw,5.6rem);line-height:.94;letter-spacing:-.065em;font-weight:500}
+.support-dialog>p:not(.eyebrow){max-width:540px;margin:0;color:#625f58;font-size:1.18rem;line-height:1.48}
+.modal-support-btn{display:inline-flex;align-items:center;justify-content:center;margin-top:30px;padding:15px 21px;border:1px solid var(--ink);background:var(--ink);color:var(--white);font-family:'DM Mono',monospace;font-size:.65rem;text-transform:uppercase;letter-spacing:.06em;border-radius:999px;transition:transform .3s ease,background-color .3s ease,border-color .3s ease,box-shadow .3s ease}
+.modal-support-btn:hover{transform:translateY(-2px);background:var(--accent);border-color:var(--accent);box-shadow:0 10px 20px rgba(36,81,62,.16)}
+.modal-support-btn:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.modal-later{display:block;margin-top:14px;padding:7px 0;border:0;background:transparent;color:var(--muted);font-family:'DM Mono',monospace;font-size:.62rem;text-transform:uppercase;letter-spacing:.05em;text-decoration:underline;text-underline-offset:4px;cursor:pointer}
+.modal-later:hover{color:var(--ink)}
+.modal-later:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
 @media(max-width:800px){
   .brand-logo{gap:10px}
   .brand-logo::before{width:46px;height:46px}
@@ -65,4 +100,12 @@
   .download-row.download-ready:after{border-radius:16px}
   .download-row.download-ready .platform-icon{width:46px;height:46px;border-radius:12px}
   .download-row.download-ready .status{right:20px;top:21px}
+  .support{align-items:flex-start;flex-direction:column;gap:28px}
+  .support-link{align-self:flex-start}
+  .support-modal{padding:14px}
+  .support-dialog{padding:36px 24px 28px;border-radius:22px;max-height:calc(100dvh - 28px)}
+  .support-dialog h2{font-size:clamp(2.7rem,13vw,4rem)}
+  .support-dialog>p:not(.eyebrow){font-size:1.03rem}
+  .modal-support-btn{width:100%}
 }
+@media(prefers-reduced-motion:reduce){.support-modal,.support-dialog,.support-link,.modal-support-btn,.support-close{transition:none}}
