@@ -228,6 +228,12 @@
 
 @media(max-width:800px){
   .download-list{grid-template-columns:1fr}
+  /* Desktop renumbers 01/02/03 to match the reordered grid-column layout
+     above (mac, android, windows). On mobile the cards just stack in DOM
+     order (mac, windows, android), so the numbers need to follow suit
+     instead of inheriting the desktop remap. */
+  .download-row:nth-child(2) .download-index::after{content:'02'}
+  .download-row:nth-child(3) .download-index::after{content:'03'}
   .download-row,.download-row.download-ready{grid-template-columns:48px minmax(0,1fr);grid-template-rows:52px minmax(0,1fr);min-height:180px;padding:24px}
   .download-row .download-index{grid-column:1;grid-row:1}
   .download-row .platform-icon,.download-row.download-ready .platform-icon{width:52px!important;height:52px!important;grid-column:2;grid-row:1}
