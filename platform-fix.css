@@ -110,11 +110,6 @@
 }
 .download-row .download-copy h3,.download-row .download-copy p{max-width:100%}
 .download-row h3,.download-row.download-ready h3{color:var(--card-ink)!important}
-.download-row .download-badge{
-  background:transparent!important;
-  border-color:var(--card-border)!important;
-  color:var(--card-muted)!important;
-}
 .download-row p,.download-row.download-ready p{color:var(--card-muted)!important;transition:color .35s ease!important}
 .download-row .dl-btn{
   position:absolute;
