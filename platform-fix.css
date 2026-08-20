@@ -193,6 +193,33 @@
   --card-shadow:rgba(0,120,212,.08);
 }
 
+/* Midnight theme: same three identities, deep glassy panels instead of pale ones. */
+:root[data-theme="dark"] .download-row,
+:root[data-theme="dark"] .download-row.download-ready{
+  --card-bg:#141a3d;
+  --card-border:#2a3164;
+  --card-ink:#eef0fb;
+  --card-muted:#9ba3d6;
+  --card-icon-bg:rgba(255,255,255,.08);
+  --card-icon-border:rgba(255,255,255,.14);
+  --card-shadow:rgba(0,0,0,.5);
+}
+:root[data-theme="dark"] .download-row:nth-child(1),
+:root[data-theme="dark"] .download-row.download-ready:nth-child(1){
+  --card-bg:#171b2e; --card-border:#2c3150; --card-ink:#f2f3fb; --card-muted:#9599b8;
+  --card-icon-bg:rgba(255,255,255,.08); --card-icon-border:rgba(255,255,255,.14); --card-shadow:rgba(0,0,0,.5);
+}
+:root[data-theme="dark"] .download-row:nth-child(3),
+:root[data-theme="dark"] .download-row.download-ready:nth-child(3){
+  --card-bg:#132318; --card-border:#254232; --card-ink:#dcf5e4; --card-muted:#84b596;
+  --card-icon-bg:rgba(255,255,255,.08); --card-icon-border:rgba(160,255,190,.14); --card-shadow:rgba(0,40,20,.45);
+}
+:root[data-theme="dark"] .download-row:nth-child(2),
+:root[data-theme="dark"] .download-row.download-ready:nth-child(2){
+  --card-bg:#101c33; --card-border:#213c60; --card-ink:#cfe6ff; --card-muted:#7fa8d4;
+  --card-icon-bg:rgba(255,255,255,.08); --card-icon-border:rgba(120,190,255,.16); --card-shadow:rgba(0,30,60,.5);
+}
+
 @media(min-width:801px){
   .download-row:nth-child(1){grid-column:1;grid-row:1}
   .download-row:nth-child(3){grid-column:2;grid-row:1}
