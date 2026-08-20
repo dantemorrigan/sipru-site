@@ -145,6 +145,13 @@
   background:transparent;
   color:var(--card-muted);
   border-color:var(--card-border);
+  max-width:150px;
+  min-width:0;
+  padding:9px 16px;
+  font-size:.56rem;
+  line-height:1.35;
+  white-space:normal;
+  text-align:center;
   cursor:not-allowed;
   transform:none!important;
   box-shadow:none!important;
@@ -174,18 +181,18 @@
   --card-shadow:rgba(49,81,59,.14);
 }
 
-/* Windows — unavailable / disabled. */
+/* Windows — unavailable / disabled, tinted in Windows blue. */
 .download-row:nth-child(2),
 .download-row.download-ready:nth-child(2){
-  --card-bg:#e2e1dd;
-  --card-border:#d0cfca;
-  --card-ink:#777771;
-  --card-muted:#96958f;
-  --card-icon-bg:rgba(255,255,255,.42);
-  --card-icon-border:rgba(100,100,96,.10);
-  --card-shadow:rgba(80,80,76,.04);
+  --card-bg:#eaf3fc;
+  --card-border:#c7e0f4;
+  --card-ink:#1f5f95;
+  --card-muted:#6f92b3;
+  --card-icon-bg:rgba(255,255,255,.6);
+  --card-icon-border:rgba(0,120,212,.14);
+  --card-shadow:rgba(0,120,212,.08);
   cursor:not-allowed!important;
-  opacity:.78;
+  opacity:.9;
 }
 .download-row:nth-child(2):hover,
 .download-row.download-ready:nth-child(2):hover{transform:none!important;box-shadow:none!important;background:var(--card-bg)!important;border-color:var(--card-border)!important}
