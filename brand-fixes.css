@@ -67,3 +67,17 @@ body.modal-open{overflow:hidden}
   .modal-support-btn{width:100%}
 }
 @media(prefers-reduced-motion:reduce){.support-modal,.support-dialog,.support-cta,.modal-support-btn,.support-close{transition:none}}
+
+.support-actions{display:flex;flex-wrap:wrap;gap:14px}
+.support-cta{gap:10px}
+.support-icon{width:18px;height:18px;flex:0 0 18px}
+.support-cta-patreon{background:linear-gradient(135deg,#ff6b74 0%,#ff424d 55%,#e0313c 100%);border:1px solid #e0313c;box-shadow:0 12px 26px rgba(255,66,77,.28),inset 0 1px 0 rgba(255,255,255,.22)}
+.support-cta-patreon:hover{box-shadow:0 18px 34px rgba(255,66,77,.38),inset 0 1px 0 rgba(255,255,255,.3)}
+.modal-actions{display:flex;flex-direction:column;gap:12px;margin-top:30px}
+.modal-actions .modal-support-btn{margin-top:0;gap:10px}
+.modal-support-patreon{background:#ff424d;border-color:#ff424d}
+.modal-support-patreon:hover{background:#e0313c;border-color:#e0313c;box-shadow:0 10px 20px rgba(255,66,77,.22)}
+@media(max-width:800px){
+  .support-actions{flex-direction:column}
+  .support-cta{width:100%}
+}
