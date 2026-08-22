@@ -7,7 +7,7 @@
 /* Same optical nudge as .brand-logo .brand-word above, scaled to the smaller footer mark. */
 .brand-logo-footer .brand{position:relative;top:2px}
 .footer-tagline{color:var(--muted);font-size:.66rem;letter-spacing:.02em}
-.mock-logo{display:block;width:42px;height:42px;background:url("writed-logo-official.svg") center/contain no-repeat;font-size:0;line-height:0}
+.mock-logo{display:block;width:42px;height:42px;background:url("sipru-logo-official.svg") center/contain no-repeat;font-size:0;line-height:0}
 .mock-editor h2{line-height:1.09;letter-spacing:-.052em;margin-top:24px;margin-bottom:34px}
 
 /* Boosty support CTA */
