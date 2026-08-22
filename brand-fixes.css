@@ -7,7 +7,7 @@
 /* Same optical nudge as .brand-logo .brand-word above, scaled to the smaller footer mark. */
 .brand-logo-footer .brand{position:relative;top:2px}
 .footer-tagline{color:var(--muted);font-size:.66rem;letter-spacing:.02em}
-.mock-logo{display:block;width:42px;height:42px;background:url("sipru-logo-official.png") center/contain no-repeat;font-size:0;line-height:0}
+.mock-logo{display:block;height:24px;width:auto;aspect-ratio:1126.8/1002.4;color:inherit}
 .mock-editor h2{line-height:1.09;letter-spacing:-.052em;margin-top:24px;margin-bottom:34px}
 
 /* Boosty support CTA */
@@ -56,8 +56,8 @@ body.modal-open{overflow:hidden}
 
 @media(max-width:800px){
   .brand-logo{gap:10px}
-  .brand-logo::before{width:46px;height:46px}
-  .mock-logo{width:34px;height:34px}
+  .brand-logo .mark{height:26px}
+  .mock-logo{height:20px}
   .mock-editor h2{line-height:1.08;letter-spacing:-.045em}
   .support-cta{width:100%}
   .support-modal{padding:14px}

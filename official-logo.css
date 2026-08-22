@@ -2,9 +2,9 @@
 .brand-logo,.brand-logo-footer{display:inline-flex;align-items:center;line-height:1}
 .brand-logo{gap:14px}
 .brand-logo-footer{gap:8px}
-.brand-logo::before,.brand-logo-footer::before{content:"";display:block;flex:0 0 auto;background:center/contain no-repeat url("sipru-logo-official.png");align-self:center}
-.brand-logo::before{width:52px;height:52px}
-.brand-logo-footer::before{width:27px;height:27px}
+.brand-logo .mark,.brand-logo-footer .mark{display:block;flex:0 0 auto;width:auto;aspect-ratio:773.2/1000;color:inherit;align-self:center}
+.brand-logo .mark{height:30px}
+.brand-logo-footer .mark{height:16px}
 .brand-logo>span,.brand-logo-footer>span{display:inline-block;line-height:1}
 .brand-logo-footer>.brand{display:inline}
 .brand-logo-footer>.brand.small{font-size:1.3rem}
